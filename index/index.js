@@ -37,3 +37,16 @@ $.ajax({
     }
   }
 });
+
+// -----------------------------------------------------退出
+$("#logout").on("click", function () {
+  layer.confirm("确定要退出吗？", { icon: 3, title: "提示" }, function (index) {
+    //do something
+    // 本地清除
+    localStorage.removeItem("token");
+    //退回到login页面
+    location.href = "../login.html";
+    // 关闭弹窗
+    layer.close(index);
+  });
+});

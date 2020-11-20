@@ -52,6 +52,7 @@ $(function () {
           $("#register").hide();
           $("#login").show();
           // 重置
+          //   清空注册的表单(reset是dom方法，所以把jQuery对象转成DOM对象)
           $("#register .layui-form")[0].reset();
         }
       }
