@@ -41,7 +41,7 @@ $(function () {
     // 3.发请求
     $.ajax({
       type: "post",
-      url: "http://ajax.frontend.itheima.net/api/reguser",
+      url: "/api/reguser",
       data: data,
       success: function (res) {
         // 弹窗。msg简单弹窗，会自动消失
@@ -73,7 +73,7 @@ $(function () {
     //
     $.ajax({
       type: "post",
-      url: "http://ajax.frontend.itheima.net/api/login",
+      url: "/api/login",
       data: data,
       success: function (res) {
         //
@@ -84,7 +84,7 @@ $(function () {
           // 把token保存到本地存储
           localStorage.setItem("token", res.token);
           // 跳转到index.html
-          location.href = "/index.html";
+          location.href = "../index.html";
         }
       }
     });
